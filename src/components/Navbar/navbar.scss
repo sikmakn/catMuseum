@@ -1,0 +1,17 @@
+nav {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}

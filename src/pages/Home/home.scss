@@ -1,0 +1,34 @@
+.main-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  > div {
+    width: 50%;
+    max-width: 845px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .main-text-container {
+      width: 540px;
+    }
+    .about-text-container{
+      width: 420px;
+    }
+  }
+
+  .cat-croped {
+    background: url('/cat-home-croped.png') no-repeat;
+    background-size: cover;
+  }
+}
+
+.cats-list{
+  margin: 35px 0;
+  .cats-list-header{
+    margin: 0 100px;
+  }
+}

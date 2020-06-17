@@ -1,0 +1,22 @@
+header {
+  background: #191919;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+
+  .logo {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: Amatic SC, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 0 100px;
+  }
+}

@@ -5,7 +5,6 @@ nav {
   a {
     margin-left: 50px;
     margin-right: 50px;
-    color: #ffffff;
     text-decoration: none;
 
     font-family: Roboto, sans-serif;
@@ -13,5 +12,21 @@ nav {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &.dark {
+      color: #000000;
+      transition: 0.3s;
+    }
+
+    &.light {
+      color: #FFFFFF;
+      transition: 0.3s;
+    }
+
   }
+
 }
+

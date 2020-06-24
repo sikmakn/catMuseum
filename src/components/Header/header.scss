@@ -1,13 +1,17 @@
 header {
-  background: #191919;
-  color: #ffffff;
+  margin: 60px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  z-index: 5;
+  width: 80%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 
   .logo {
-    color: #ffffff;
+    color: #FFC72C;
     text-decoration: none;
 
     font-family: Amatic SC, sans-serif;
@@ -17,6 +21,39 @@ header {
     line-height: 50px;
     display: flex;
     align-items: center;
-    margin: 0 100px;
+  }
+}
+
+.header-enter-active {
+  animation: header-anim-visible 300ms ease-in-out forwards;
+}
+
+.header-enter-done {
+  position: fixed;
+}
+
+.header-exit-active {
+  animation: header-anim-hide 300ms ease-in-out forwards;
+}
+
+.header-exit-done {
+  position: absolute;
+}
+
+@keyframes header-anim-hide {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    transform: translateY(-100px) translateX(-50%);
+  }
+}
+
+@keyframes header-anim-visible {
+  0% {
+    transform: translateY(-100px) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
   }
 }

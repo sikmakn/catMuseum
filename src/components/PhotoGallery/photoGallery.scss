@@ -1,0 +1,24 @@
+.scroll-name {
+  min-width: calc((100vw - 726px - 50px) / 2);
+  min-height: calc((100vw - 726px - 50px) / 2);
+  height: calc((100vw - 726px - 50px) / 2);
+  width: calc((100vw - 726px - 50px) / 2);
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.photo-gallery-elem {
+  width: 726px;
+  min-width: 726px;
+  height: 726px;
+  background: center center;
+  object-fit: cover;
+  margin: 0 25px;
+}
+
+.last-empty {
+  min-width: calc((100vw - 726px - 50px) / 2);
+  min-height: calc((100vw - 726px - 50px) / 2);
+  height: calc((100vw - 726px - 50px) / 2);
+  width: calc((100vw - 726px - 50px) / 2);
+}

@@ -1,0 +1,41 @@
+.image-info-container {
+  width: 570px;
+  height: 700px;
+  position: relative;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    background: center center;
+    object-fit: cover;
+  }
+
+  .info-container {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 500ms;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 0;
+    padding: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    p {
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+  }
+
+
+  .visible {
+    transition: opacity 500ms;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,80 @@
+.exhibition-slider-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 370px;
+
+    p {
+      margin: 0;
+    }
+
+    span {
+      .type {
+        font-weight: normal;
+      }
+
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 140%;
+      color: #282828;
+    }
+
+    .arrows {
+      margin: 85px 0;
+
+      img {
+        cursor: pointer;
+        transition: transform 300ms;
+
+        &:hover {
+          transform: scale(1.2);
+          transition: transform 300ms;
+        }
+      }
+
+      span {
+        margin: 16px;
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 170%;
+        color: #C9C9C9;
+
+        .active {
+          color: #282828;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.exhibition-anim-enter {
+  opacity: 0;
+  transition: 1s;
+}
+
+.exhibition-anim-enter-active {
+  opacity: 1;
+  position: absolute;
+  right: 0;
+}
+
+.exhibition-anim-exit {
+  opacity: 1;
+  transition: 1s;
+  position: absolute;
+  right: 0;
+}
+
+.exhibition-anim-exit-active {
+  opacity: 0;
+}

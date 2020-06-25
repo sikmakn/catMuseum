@@ -4,7 +4,6 @@ import './header.scss';
 import React, {useEffect, useState} from 'react';
 import Navbar from '../Navbar';
 import {NavLink} from 'react-router-dom';
-import {CSSTransition} from 'react-transition-group';
 
 const Header: React.FC = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -40,17 +39,10 @@ const Header: React.FC = () => {
     }, [scrollY, isVisible, isDarkBackground]);
 
     return (
-        <CSSTransition
-            in={isVisible}
-            timeout={300}
-            classNames={'header'}
-            mountOnEnter
-        >
-            <header>
-                <NavLink exact to="/" className="logo">Музей кота</NavLink>
-                <Navbar isDarkBackground={isDarkBackground}/>
-            </header>
-        </CSSTransition>
+        <header>
+            <NavLink exact to="/" className="logo">Музей кота</NavLink>
+            <Navbar isDarkBackground={isDarkBackground}/>
+        </header>
     );
 };
 

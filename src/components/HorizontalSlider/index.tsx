@@ -1,14 +1,27 @@
 import '../../wdyr';
 
 import './horizontalSlider.scss';
-import React, {MouseEvent, useRef, useState} from 'react';
+import React, {MouseEvent, useEffect, useRef, useState} from 'react';
 
-const HorizontalSlider: React.FC = ({children}) => {
+export interface HorizontalSliderProps {
+    isKeepFirst?: boolean,
+    isKeepLast?: boolean,
+}
+
+const HorizontalSlider: React.FC<HorizontalSliderProps> = ({children, isKeepFirst, isKeepLast}) => {
     const ref = useRef(null);
     const [isDown, setIsDown] = useState(false);
     const [isDrag, setIsDrag] = useState(false);
 
-    const mouseDownHandler = () => setIsDown(true);
+    useEffect(() => {
+        const target = ref.current! as HTMLElement;
+        target.children[1].classList.add('active');
+    }, []);
+
+    const mouseDownHandler = (event: MouseEvent) => {
+        event.preventDefault();
+        setIsDown(true);
+    };
 
     const mouseMoveHandler = (event: MouseEvent) => {
         if (!isDown || Math.abs(event.movementX) < 5) return;
@@ -18,18 +31,53 @@ const HorizontalSlider: React.FC = ({children}) => {
         target.scrollTo({left: target.scrollLeft - event.movementX});
     };
 
+    const dragToCentralElement = (target: HTMLElement) => {
+        const halfOfWindowWidth = window.innerWidth / 2;
+        let i = 0;
+        let centralChildren = target.children[0] as HTMLElement;
+        while (target.scrollLeft > centralChildren.offsetLeft - centralChildren.offsetWidth * 0.3) {
+            i++;
+            centralChildren = target.children[i] as HTMLElement;
+        }
+        makeActive(target, centralChildren);
+        return centralChildren.offsetLeft - halfOfWindowWidth + centralChildren.offsetWidth / 2;
+    };
+
+    const clickToCentralElement = (eventTarget: HTMLElement, target: HTMLElement) => {
+        const halfOfWindowWidth = window.innerWidth / 2;
+        const halfOfEventTargetWidth = eventTarget.offsetWidth / 2;
+
+        if (isKeepFirst && eventTarget === target.children[0]) return;
+        if (isKeepLast && eventTarget === target.children[target.children.length - 1]) return;
+
+        makeActive(target, eventTarget);
+        return eventTarget.offsetLeft - halfOfWindowWidth + halfOfEventTargetWidth;
+
+    };
+
+    function makeActive(target: HTMLElement, newActiveNode: HTMLElement) {
+        for (let i = 0; i < target.children.length; i++)
+            target.children[i].classList.remove('active');
+
+        newActiveNode.classList.add('active');
+    }
+
     const mouseUpHandler = (event: MouseEvent) => {
         setIsDown(false);
-        if (isDrag) return setIsDrag(false);
-
-        const eventTarget = event.target as HTMLElement;
-        const halfOfWidth = eventTarget.offsetWidth / 2;
-
         const target = ref.current! as HTMLElement;
-        target.scrollTo({
-            left: eventTarget.offsetLeft - window.innerWidth / 2 + halfOfWidth,
-            behavior: 'smooth',
-        });
+
+        let scrollTo;
+        if (isDrag) {
+            scrollTo = dragToCentralElement(target);
+            setIsDrag(false);
+        } else {
+            scrollTo = clickToCentralElement(event.target as HTMLElement, target);
+        }
+        if (scrollTo !== undefined)
+            target.scrollTo({
+                left: scrollTo,
+                behavior: 'smooth',
+            });
     };
 
     return (

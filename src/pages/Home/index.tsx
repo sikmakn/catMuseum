@@ -42,6 +42,7 @@ const Home: React.FC = () => (
             </div>
         </div>
         <div className="yellow-scroll">
+            <div className="yellow-rect"></div>
             <PhotoGallery/>
         </div>
     </>

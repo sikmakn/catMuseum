@@ -14,7 +14,7 @@ const PhotoGallery: React.FC = () => {
     ];
 
     return (
-        <HorizontalSlider>
+        <HorizontalSlider isKeepFirst isKeepLast>
             <div className="scroll-name"><h2>Фотоальбом</h2></div>
             {images.map((image, i) =>
                 (<img className="photo-gallery-elem"

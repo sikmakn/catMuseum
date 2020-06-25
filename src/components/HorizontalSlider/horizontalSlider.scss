@@ -1,5 +1,14 @@
 #horizontal-scroll-container {
   display: flex;
   overflow-x: hidden;
-  //scroll-behavior: smooth;
+
+  >* {
+    user-drag: none;
+    user-select: none;
+    filter: brightness(50%);
+  }
+
+  .active {
+    filter: brightness(100%);
+  }
 }

@@ -5,6 +5,7 @@ import YellowScroll from "../../pageParts/YellowScroll";
 import AboutMuseum from "../../pageParts/AboutMuseum";
 import Top from "../../pageParts/Top";
 import Exhibitions from "../../pageParts/Exhibitions";
+import AnimalsInDangerous from "../../pageParts/AnimalsInDanger";
 
 const Home: React.FC = () => (
     <>
@@ -12,6 +13,7 @@ const Home: React.FC = () => (
         <AboutMuseum/>
         <YellowScroll/>
         <Exhibitions/>
+        <AnimalsInDangerous/>
     </>
 );
 

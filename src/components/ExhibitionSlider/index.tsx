@@ -7,7 +7,7 @@ import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 export interface ExhibitionData {
     type: 'выставка' | 'конкурс'
-    status: 'текущая' | 'предстоящая'
+    status: 'now' | 'future'
     title: string
     commonInfo: string
     fullInfo: string
@@ -22,7 +22,26 @@ export interface ExhibitionSliderProps {
 
 const ExhibitionSlider: React.FC<ExhibitionSliderProps> = ({data}) => {
     const [selectedData, setSelectedData] = useState(0);
+    const dateTimeFormat = new Intl.DateTimeFormat('ru', {day: 'numeric', year: 'numeric', month: 'long'});
 
+    function getShortFormattedDate(date: Date): string {
+        const [{value: month}, , {value: day}] = dateTimeFormat.formatToParts(date);
+        return month + ' ' + day;
+    }
+
+    function getFullFormattedDate(date: Date): string {
+        const [{value: month}, , {value: day}, , {value: year}] = dateTimeFormat.formatToParts(date);
+        return month + ' ' + day + ', ' + year;
+    }
+
+    function getStatus(type: 'выставка' | 'конкурс', status: 'now' | 'future'): string {
+        if (type === 'выставка') {
+            if (status === 'now') return 'текущая';
+            return 'предстоящая';
+        }
+        if (status === 'now') return 'текущий';
+        return 'предстоящий';
+    }
 
     const prevHandler = () => {
         if (selectedData === 0) return;
@@ -43,14 +62,26 @@ const ExhibitionSlider: React.FC<ExhibitionSliderProps> = ({data}) => {
             >
                 <div className="exhibition-slider-container">
                     <div className="info-container">
-                        <span> <span
-                            className="type">{data[selectedData].type}</span> - {data[selectedData].status}</span>
+                        <span>
+                            <span className="type">{data[selectedData].type}</span>
+                            &nbsp; - &nbsp;
+                            {getStatus(data[selectedData].type, data[selectedData].status)}
+                        </span>
+                        <span>
+                            {getShortFormattedDate(data[selectedData].dateFrom)}
+                            &nbsp; - &nbsp;
+                            {getFullFormattedDate(data[selectedData].dateTo)}
+                        </span>
                         <h3>{data[selectedData].title}</h3>
                         <p>{data[selectedData].commonInfo}</p>
 
                         <div className="arrows">
                             <img src="arrow-grey-left.svg" alt="предыдущий" onClick={prevHandler}/>
-                            <span><span className="active">{selectedData + 1}</span>/{data.length}</span>
+                            <span>
+                                <span className="active">{selectedData + 1}</span>
+                                &nbsp; / &nbsp;
+                                {data.length}
+                            </span>
                             <img src="arrow-grey-right.svg" alt="следующий" onClick={nextHandler}/>
                         </div>
                     </div>

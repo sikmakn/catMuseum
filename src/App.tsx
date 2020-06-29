@@ -7,15 +7,18 @@ import Home from './pages/Home';
 import Help from "./pages/Help/Help";
 import Reviews from "./pages/Reviews";
 import Tickets from "./pages/Tickets";
+import Contacts from "./pages/Contacts";
+import {PATHS} from "./constants";
 
 const App: React.FC = () => (
     <BrowserRouter>
         <Header/>
         <Switch>
             <Route path="/" exact component={Home}/>
-            <Route path="/help" exact component={Help}/>
-            <Route path="/reviews" exact component={Reviews}/>
-            <Route path="/tickets" exact component={Tickets}/>
+            <Route path={PATHS.HELP} exact component={Help}/>
+            <Route path={PATHS.REVIEWS} exact component={Reviews}/>
+            <Route path={PATHS.BUY} exact component={Tickets}/>
+            <Route path={PATHS.CONTACTS} exact component={Contacts}/>
         </Switch>
     </BrowserRouter>
 );

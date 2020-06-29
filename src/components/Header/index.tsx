@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 
     useEffect(() => {
         function detectedBackground() {
-            let backElem = document.elementFromPoint(window.pageXOffset + 2, window.pageYOffset + 60) as HTMLElement;
+            let backElem = document.elementFromPoint(window.pageXOffset + window.innerWidth / 2, window.pageYOffset + 90) as HTMLElement;
 
             while (backElem && backElem.parentElement?.id !== 'root')
                 backElem = backElem.parentElement as HTMLElement;

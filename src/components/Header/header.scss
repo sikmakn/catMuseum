@@ -1,3 +1,5 @@
+@import "../../colors.scss";
+
 header {
   margin: 60px 0;
   display: flex;
@@ -11,7 +13,7 @@ header {
   transform: translateX(-50%);
 
   .logo {
-    color: #FFC72C;
+    color: $yellow1;
     text-decoration: none;
 
     font-family: Amatic SC, sans-serif;

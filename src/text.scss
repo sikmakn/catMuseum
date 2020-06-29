@@ -1,3 +1,5 @@
+@import './colors.scss';
+
 h1 {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -15,7 +17,7 @@ h2 {
   font-size: 48px;
   line-height: 56px;
 
-  color: #191919;
+  color: $black2;
 }
 
 h3 {
@@ -24,7 +26,7 @@ h3 {
   font-weight: normal;
   font-size: 30px;
   line-height: 140%;
-  color: #191919;
+  color: $black2;
   margin: 20px 0;
 }
 
@@ -36,7 +38,7 @@ p {
   line-height: 140%;
   margin: 8px;
 
-  color: #282828;
+  color: $black1;
 }
 
 a {
@@ -46,6 +48,6 @@ a {
   font-size: 16px;
   line-height: 19px;
 
-  color: #191919;
+  color: $black2;
   text-decoration: none;
 }

@@ -3,6 +3,7 @@ import '../../wdyr';
 import './navbar.scss';
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import {PATHS} from "../../constants";
 
 interface NavbarProps {
     isDarkBackground: boolean
@@ -10,11 +11,11 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({isDarkBackground}) => (
     <nav>
-        <NavLink className={isDarkBackground ? 'light' : 'dark'} to="/photo">Фотоальбом</NavLink>
-        <NavLink className={isDarkBackground ? 'light' : 'dark'} to="/help">Помощь животным</NavLink>
-        <NavLink className={isDarkBackground ? 'light' : 'dark'} to="/reviews">Отзывы</NavLink>
-        <NavLink className={isDarkBackground ? 'light' : 'dark'} to="/contacts">Контакты</NavLink>
-        <NavLink className={isDarkBackground ? 'light' : 'dark'} to="/tickets">Купить билет</NavLink>
+        <NavLink className={isDarkBackground ? 'light' : 'dark'} to={PATHS.PHOTO_ALBUM}>Фотоальбом</NavLink>
+        <NavLink className={isDarkBackground ? 'light' : 'dark'} to={PATHS.HELP}>Помощь животным</NavLink>
+        <NavLink className={isDarkBackground ? 'light' : 'dark'} to={PATHS.REVIEWS}>Отзывы</NavLink>
+        <NavLink className={isDarkBackground ? 'light' : 'dark'} to={PATHS.CONTACTS}>Контакты</NavLink>
+        <NavLink className={isDarkBackground ? 'light' : 'dark'} to={PATHS.BUY}>Купить билет</NavLink>
     </nav>
 );
 

@@ -1,7 +1,9 @@
+@import "../../colors.scss";
+
 .exhibition-container {
   height: 100vh;
   width: 100vw;
-  background: #FFFFFF;
+  background: $white;
 
   > div {
     width: 1200px;

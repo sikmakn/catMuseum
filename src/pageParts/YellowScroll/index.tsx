@@ -6,7 +6,7 @@ import PhotoGallery from "../../components/PhotoGallery";
 
 const YellowScroll: React.FC = () => (
     <div className="yellow-scroll">
-        <div className="yellow-rect"></div>
+        <div className="yellow-rect"/>
         <PhotoGallery/>
     </div>
 );

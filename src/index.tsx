@@ -8,7 +8,7 @@ import WebFont from 'webfontloader';
 
 WebFont.load({
     google: {
-        families: ['Roboto:300,400', 'sans-serif', 'Amatic SC']
+        families: ['Roboto:300,400,500', 'sans-serif', 'Amatic SC']
     }
 });
 

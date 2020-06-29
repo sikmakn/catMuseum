@@ -1,3 +1,5 @@
+@import "../../colors.scss";
+
 .slider-container {
   width: 100%;
   height: 100%;
@@ -21,7 +23,7 @@
     transform: translateX(-50%);
 
     .drop {
-      border: 1px solid #FFFFFF;
+      border: 1px solid $white;
       box-sizing: border-box;
       width: 10px;
       height: 10px;
@@ -31,8 +33,8 @@
     }
 
     .selected {
-      background: #FFFFFF;
-      border: 1px solid #FFFFFF;
+      background: $white;
+      border: 1px solid $white;
       box-sizing: border-box;
       opacity:.6
     }

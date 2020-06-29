@@ -1,3 +1,5 @@
+@import "../../colors.scss";
+
 nav {
   display: flex;
   align-items: center;
@@ -12,17 +14,18 @@ nav {
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    &:last-child{
+
+    &:last-child {
       margin-right: 0;
     }
 
     &.dark {
-      color: #000000;
+      color: $black;
       transition: 0.3s;
     }
 
     &.light {
-      color: #FFFFFF;
+      color: $white1;
       transition: 0.3s;
     }
 

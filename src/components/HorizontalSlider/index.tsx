@@ -16,6 +16,7 @@ const HorizontalSlider: React.FC<HorizontalSliderProps> = ({children, isKeepFirs
     useEffect(() => {
         const target = ref.current! as HTMLElement;
         target.children[1].classList.add('active');
+        target.scrollTo({left: 0})
     }, []);
 
     const mouseDownHandler = (event: MouseEvent) => {

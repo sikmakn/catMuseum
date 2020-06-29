@@ -1,3 +1,5 @@
+@import "../../colors.scss";
+
 .top-grid {
   display: flex;
   align-items: center;
@@ -15,7 +17,7 @@
     width: 80%;
 
     h1 {
-      color: #ffffff;
+      color: $white;
       width: 450px;
     }
 

@@ -20,5 +20,10 @@
         width: 570px;
       }
     }
+    >.link{
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+    }
   }
 }

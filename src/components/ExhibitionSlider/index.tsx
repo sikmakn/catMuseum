@@ -78,8 +78,7 @@ const ExhibitionSlider: React.FC<ExhibitionSliderProps> = ({data}) => {
                         <div className="arrows">
                             <img src="arrow-grey-left.svg" alt="предыдущий" onClick={prevHandler}/>
                             <span>
-                                <span className="active">{selectedData + 1}</span>
-                                &nbsp; / &nbsp;
+                                <span className="active">{selectedData + 1} / </span>
                                 {data.length}
                             </span>
                             <img src="arrow-grey-right.svg" alt="следующий" onClick={nextHandler}/>

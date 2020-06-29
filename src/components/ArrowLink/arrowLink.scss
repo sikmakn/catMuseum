@@ -1,13 +1,12 @@
 .link-container {
-  display: flex;
-  flex-direction: row-reverse;
+  width: content-box;
   margin: 85px 0;
 
-  a {
+  > a {
     display: flex;
     align-items: center;
 
-    span {
+    > span {
       font-family: Roboto, sans-serif;
       font-style: normal;
       font-weight: 500;
@@ -16,13 +15,17 @@
       margin: 14px;
     }
 
-    .arrow-square {
-      background: #FFD256;
+    > .arrow-square {
       width: 35px;
       height: 35px;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      > img {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }

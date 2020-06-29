@@ -14,6 +14,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/react-transition-group": "^4.4.0",
+    "@types/rellax": "^1.7.3",
     "@types/webfontloader": "^1.6.32",
     "@welldone-software/why-did-you-render": "^4.2.5",
     "classnames": "^2.2.6",
@@ -25,6 +26,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
+    "rellax": "^1.12.1",
     "typescript": "~3.7.2",
     "webfontloader": "^1.6.28"
   },

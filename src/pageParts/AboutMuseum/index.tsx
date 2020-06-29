@@ -20,7 +20,9 @@ const AboutMuseum: React.FC = () => (
                 </div>
             </div>
             <AboutCards/>
-            <ArrowLink color="#FFD256" linkText="Посетить музей" path="/visit"/>
+            <div className="link">
+                <ArrowLink color="#FFD256" linkText="Посетить музей" path="/visit"/>
+            </div>
             {/*todo colors and links to global*/}
         </div>
     </div>

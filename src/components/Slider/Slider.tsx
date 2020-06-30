@@ -1,3 +1,5 @@
+import '../../wdyr';
+
 import './slider.scss';
 import React, {useState} from 'react';
 

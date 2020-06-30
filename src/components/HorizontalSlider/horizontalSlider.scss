@@ -1,5 +1,6 @@
 #horizontal-scroll-container {
   display: flex;
+  align-items: center;
   overflow-x: hidden;
 
   >* {

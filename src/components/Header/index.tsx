@@ -25,12 +25,12 @@ const Header: React.FC = () => {
         }
 
         function headerView() {
-            if (scrollY - window.pageYOffset >= 0 && !isVisible) {
-                setIsVisible(true);
-            } else if (scrollY - window.pageYOffset <= 0 && isVisible) {
-                setIsVisible(false);
-            }
-            setScrollY(window.pageYOffset);
+            // if (scrollY - window.pageYOffset >= 0 && !isVisible) {
+            //     setIsVisible(true);
+            // } else if (scrollY - window.pageYOffset <= 0 && isVisible) {
+            //     setIsVisible(false);
+            // }
+            // setScrollY(window.pageYOffset);
             detectedBackground()
         }
 

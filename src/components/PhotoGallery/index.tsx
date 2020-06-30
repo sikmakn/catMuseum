@@ -1,4 +1,5 @@
 import '../../wdyr';
+
 import React from "react";
 import HorizontalSlider from "../HorizontalSlider";
 import './photoGallery.scss'

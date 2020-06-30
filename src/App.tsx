@@ -9,12 +9,14 @@ import Reviews from "./pages/Reviews";
 import Tickets from "./pages/Tickets";
 import Contacts from "./pages/Contacts";
 import {PATHS} from "./constants";
+import Album from "./pages/Album";
 
 const App: React.FC = () => (
     <BrowserRouter>
         <Header/>
         <Switch>
             <Route path="/" exact component={Home}/>
+            <Route path={PATHS.PHOTO_ALBUM} exact component={Album}/>
             <Route path={PATHS.HELP} exact component={Help}/>
             <Route path={PATHS.REVIEWS} exact component={Reviews}/>
             <Route path={PATHS.BUY} exact component={Tickets}/>

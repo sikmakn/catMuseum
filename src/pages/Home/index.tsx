@@ -11,7 +11,7 @@ import Footer from "../../pageParts/Footer";
 
 const Home: React.FC = () => (
     <>
-        <Top/>
+        <Top darken={0.1} header="ДОМ КОТИКОВ И КОШЕК" backgroundUrl="cat-main-head.jpg"/>
         <AboutMuseum/>
         <YellowScroll/>
         <Exhibitions/>

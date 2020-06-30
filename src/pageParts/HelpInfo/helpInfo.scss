@@ -1,0 +1,31 @@
+@import "../../colors.scss";
+
+.help-info-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) no-repeat center;
+
+  .content {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+
+    .information {
+      width: 640px;
+      background: $white;
+      padding: 130px 80px;
+      box-sizing: border-box;
+
+      p{
+        margin: 40px 0;
+        width: 450px;
+      }
+    }
+
+  }
+
+}

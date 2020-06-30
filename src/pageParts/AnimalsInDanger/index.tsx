@@ -4,7 +4,7 @@ import './animalsInDanger.scss';
 import React, {useEffect, useRef} from "react";
 import ArrowLink from "../../components/ArrowLink";
 import Rellax from 'rellax';
-import {PATHS, COLORS} from "../../constants";
+import {COLORS, PATHS} from "../../constants";
 
 const AnimalsInDangerous: React.FC = () => {
     const allBlockRef = useRef(null);
@@ -38,37 +38,39 @@ const AnimalsInDangerous: React.FC = () => {
         }
     }
 
-    function scrollToDown(event: WheelEvent) {
-        const allBlock = allBlockRef.current! as HTMLElement;
-        const whiteBlock = whiteBlockRef.current! as HTMLElement;
-        if (window.pageYOffset + whiteBlock.offsetHeight >= allBlock.offsetTop
-            && window.pageYOffset < allBlock.offsetTop) {
-            if (isScroll) return event.preventDefault();
-            isScroll = true;
-            scroll(allBlock.offsetTop)
-        } else if (window.pageYOffset < whiteBlock.offsetTop && window.pageYOffset > allBlock.offsetTop) {
-            if (isScroll) return event.preventDefault();
-            isScroll = true;
-            scroll(whiteBlock.offsetTop);
-        }
-    }
-
-    function scrollToTop(event: WheelEvent) {
-        const allBlock = allBlockRef.current! as HTMLElement;
-        const whiteBlock = whiteBlockRef.current! as HTMLElement;
-        if (window.pageYOffset < whiteBlock.offsetTop && window.pageYOffset > allBlock.offsetTop) {
-            if (isScroll) return event.preventDefault();
-            isScroll = true;
-            scroll(allBlock.offsetTop, false);
-        } else if (window.pageYOffset < allBlock.offsetTop + allBlock.offsetHeight && window.pageYOffset > allBlock.offsetTop) {
-            if (isScroll) return event.preventDefault();
-            isScroll = true;
-            scroll(whiteBlock.offsetTop, false);
-        }
-    }
-
     useEffect(() => {
-        document.onwheel = (event) => {
+        function scrollToDown(event: WheelEvent) {
+            const allBlock = allBlockRef.current! as HTMLElement;
+            const whiteBlock = whiteBlockRef.current! as HTMLElement;
+            if (window.pageYOffset + whiteBlock.offsetHeight >= allBlock.offsetTop
+                && window.pageYOffset < allBlock.offsetTop) {
+                if (isScroll) return event.preventDefault();
+                isScroll = true;
+                scroll(allBlock.offsetTop)
+            } else if (window.pageYOffset < whiteBlock.offsetTop && window.pageYOffset > allBlock.offsetTop) {
+                if (isScroll) return event.preventDefault();
+                isScroll = true;
+                scroll(whiteBlock.offsetTop);
+            }
+        }
+
+        function scrollToTop(event: WheelEvent) {
+            const allBlock = allBlockRef.current! as HTMLElement;
+            const whiteBlock = whiteBlockRef.current! as HTMLElement;
+            if (window.pageYOffset < whiteBlock.offsetTop && window.pageYOffset > allBlock.offsetTop) {
+                if (isScroll) return event.preventDefault();
+                isScroll = true;
+                scroll(allBlock.offsetTop, false);
+            } else if (window.pageYOffset < allBlock.offsetTop + allBlock.offsetHeight && window.pageYOffset > allBlock.offsetTop) {
+                if (isScroll) return event.preventDefault();
+                isScroll = true;
+                scroll(whiteBlock.offsetTop, false);
+            }
+        }
+
+        document.onwheel = (event: WheelEvent) => {
+            if (allBlockRef.current == null) return document.onwheel = null;
+
             const allBlock = allBlockRef.current! as HTMLElement;
 
             if (window.scrollY + allBlock.offsetHeight <= allBlock.offsetTop) return;
@@ -76,7 +78,7 @@ const AnimalsInDangerous: React.FC = () => {
             if (event.deltaY > 0) return scrollToDown(event);
 
             scrollToTop(event);
-        }
+        };
     }, []);
 
     return (

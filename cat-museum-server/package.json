@@ -1,0 +1,39 @@
+{
+  "name": "cat-museum-server",
+  "version": "1.0.0",
+  "description": "cat museum server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node app.js"
+  },
+  "author": "sikmakn",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "@types/compression": "^1.7.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.7",
+    "@types/express-session": "^1.17.0",
+    "@types/helmet": "0.0.47",
+    "@types/mongodb": "^3.5.25",
+    "@types/mongoose": "^5.7.31",
+    "@types/multer": "^1.4.3",
+    "@types/winston": "^2.4.4",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^3.23.3",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.23",
+    "multer": "^1.4.2",
+    "winston": "^3.3.3",
+    "winston-mongodb": "^5.0.1"
+  }
+}

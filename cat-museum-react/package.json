@@ -1,0 +1,65 @@
+{
+  "name": "cat-museum-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/aos": "^3.0.3",
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-addons-transition-group": "^15.0.4",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-lazy-load-image-component": "^1.5.0",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-transition-group": "^4.4.0",
+    "@types/rellax": "^1.7.3",
+    "@types/uuid": "^8.0.0",
+    "@types/webfontloader": "^1.6.32",
+    "@welldone-software/why-did-you-render": "^4.2.5",
+    "aos": "^2.3.4",
+    "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-addons-transition-group": "^15.6.2",
+    "react-dom": "^16.13.1",
+    "react-indiana-drag-scroll": "^1.6.1",
+    "react-lazy-load-image-component": "^1.5.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.4.1",
+    "react-yandex-maps": "^4.4.0",
+    "rellax": "^1.12.1",
+    "typescript": "~3.7.2",
+    "uuid": "^8.2.0",
+    "webfontloader": "^1.6.28"
+  },
+  "scripts": {
+    "start": "set HTTPS=true&&react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^3.8.0"
+  }
+}

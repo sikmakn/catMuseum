@@ -1,0 +1,19 @@
+.reviews-container {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  img {
+    position: absolute;
+    width: 270px;
+    height: 410px;
+    user-drag: none;
+    user-select: none;
+    object-fit: cover;
+    background-position: center center;
+  }
+}

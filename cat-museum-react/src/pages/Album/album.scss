@@ -1,0 +1,10 @@
+@import "../../colors.scss";
+
+.album-container {
+  background: $black2;
+
+  .album-content-container {
+    margin: 0 auto;
+    width: 1260px;
+  }
+}

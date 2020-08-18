@@ -1,0 +1,35 @@
+@import "../../colors.scss";
+
+nav {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-decoration: none;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.dark {
+      color: $black;
+      transition: 0.3s;
+    }
+
+    &.light {
+      color: $white1;
+      transition: 0.3s;
+    }
+
+  }
+
+}
+

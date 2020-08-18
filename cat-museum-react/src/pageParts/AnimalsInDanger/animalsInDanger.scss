@@ -1,0 +1,73 @@
+@import "../../colors.scss";
+
+.animals-in-dangerous-parallax {
+  &.sad {
+    background: #191919 url("/sad-cat.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &.happy {
+    background: #191919 url("/happy-cat.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  width: 50%;
+  height: 100%;
+  z-index: -5;
+}
+
+.animals-in-dangerous-dark-container {
+  height: 100vh;
+  display: flex;
+
+  > .animal-in-dangers-content {
+    background: $black2;
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  p {
+    color: $white;
+  }
+}
+
+.animals-in-dangerous-light-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+
+  > .animal-in-dangers-content {
+    background: $white;
+  }
+}
+
+.animal-in-dangers-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    .link {
+      margin-left: 10px;
+    }
+
+    h2 {
+      margin-bottom: 35px;
+    }
+
+    p {
+      width: 470px;
+      margin-bottom: 58px;
+    }
+  }
+}

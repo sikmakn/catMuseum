@@ -1,0 +1,27 @@
+@import "../../colors.scss";
+
+.exhibition-container {
+  height: 100vh;
+  width: 100vw;
+  background: $white;
+  margin: 0;
+
+  > div {
+    width: 1200px;
+    margin: 0 auto;
+
+    .common-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      h2 {
+        width: 255px;
+      }
+
+      .description-container {
+        width: 570px;
+      }
+    }
+  }
+}

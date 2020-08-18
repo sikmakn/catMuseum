@@ -1,0 +1,16 @@
+@import "../../colors.scss";
+
+.yellow-scroll {
+  position: relative;
+  margin-top: 250px;
+  height: 100vh;
+
+  .yellow-rect {
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    top: -85px;
+    background: $yellow1;
+    z-index: -1;
+  }
+}

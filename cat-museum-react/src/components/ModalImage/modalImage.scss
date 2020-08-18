@@ -1,0 +1,32 @@
+.modal-image-background {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.8);
+
+  .modal-image {
+     &.horizontal{
+        width: 1200px;
+        height: 640px;
+        object-fit: cover;
+       background-position: center;
+     }
+     &.vertical{
+        width: 740px;
+        height: 1034px;
+        object-fit: cover;
+        background-position: center;
+     }
+    margin: 0 80px;
+  }
+
+}
+

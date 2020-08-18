@@ -1,0 +1,92 @@
+@import "../../colors.scss";
+
+.help-navigation-container {
+  position: fixed;
+  z-index: 2;
+  width: 1200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50vh;
+  margin-left: -600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh;
+
+  > div {
+    display: flex;
+    justify-content: flex-end;
+
+    &.radio {
+      padding-right: 20px;
+    }
+
+    &.stick {
+      margin-right: 31px;
+    }
+
+    .yellow {
+      color: $yellow1;
+    }
+
+    img {
+      margin-left: 50px;
+    }
+
+    span {
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: $white;
+    }
+
+  }
+
+  > img:first-child {
+    margin-bottom: 20px;
+  }
+
+  > img:last-child {
+    margin-top: 20px;
+  }
+
+}
+
+.yellow-transition {
+  transition: color 700ms;
+}
+
+.make-yellow {
+  animation: makeYellowAnimation 500ms ease-in-out forwards;
+}
+
+@keyframes makeYellowAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.help-navigation-enter{
+  opacity: 0;
+}
+
+.help-navigation-enter-active {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.help-navigation-exit{
+  opacity: 1;
+}
+
+.help-navigation-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}

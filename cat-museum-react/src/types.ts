@@ -1,0 +1,1 @@
+export type ImageInfo = { photoId: string, _id: string };

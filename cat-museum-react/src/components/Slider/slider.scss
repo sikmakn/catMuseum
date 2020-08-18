@@ -1,0 +1,42 @@
+@import "../../colors.scss";
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  .slider-arrow-switcher {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+  }
+
+  .slider-drops {
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .drop {
+      border: 1px solid $white;
+      box-sizing: border-box;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 10px;
+      opacity: .3;
+    }
+
+    .selected {
+      background: $white;
+      border: 1px solid $white;
+      box-sizing: border-box;
+      opacity:.6
+    }
+  }
+}
